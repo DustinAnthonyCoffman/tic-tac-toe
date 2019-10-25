@@ -24,34 +24,33 @@ let player2 = [];
 //user clicks div, pulls value from div puts in player array
 document.getElementById('grid')
     .addEventListener('click', function(evt) {
+        if ( !(evt.target.textContent) ) { 
+            alert('you cant click twice!!');  
+            return;
+    };
+    
         let boxValue = evt.target.textContent;
+        
+ 
+        
         if (turn === 'player1') {
+           
             player1.push(boxValue);
-            turn = 'player2';
-            console.log(player1);
+            backgroundChange(evt);
             checkWinner(player1, player2);
+            turn = 'player2';
             return;
 
         }
         if (turn === 'player2') {
             player2.push(boxValue);
-            turn = 'player1';
-            console.log(player1);
+            backgroundChange(evt);
             checkWinner(player1, player2);
+            turn = 'player1';
             return;
         }
     });
 
-    document.getElementById('grid')
-    .addEventListener('click', function(evt) {
-        let targetDiv = evt.target;
-        if (turn === player1) {
-           targetDiv = document.querySelector('div').style.backgroundImage = 'https://imgur.com/k7SbxY5';
-        }
-        if (turn === player2) {
-        document.querySelector('div').style.backgroundImage = 'https://imgur.com/Z9XWiPy';
-        }
-    })
 
 /*----- functions -----*/
 
@@ -74,12 +73,28 @@ function checkWinner(p1, p2) {
     console.log('Player 2 boxes taken');  
     console.log(p2.join());
     if (winningCombo.includes(p1.join())) {
-       console.log('player1wins');
+       alert('player1wins');
        render();
 
    }
     if (winningCombo.includes(p2.join())) {
-        console.log('player2wins');
+        alert('player2wins');
         render();
 }
+}
+
+function backgroundChange(evt) {
+    let targetDiv = evt.target;
+    let badClick = document.getElementById('grid');
+    if (targetDiv === badClick) {
+        return;
+    }
+        if (turn === 'player1') {
+           targetDiv.style.backgroundImage = 'url(https://i.imgur.com/k7SbxY5.png)';
+            targetDiv.textContent = '';
+        }
+        if (turn === 'player2') {
+            targetDiv.style.backgroundImage = 'url(https://i.imgur.com/Z9XWiPy.png)';
+            targetDiv.textContent = '';
+        }
 }
