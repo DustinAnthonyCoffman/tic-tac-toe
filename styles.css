@@ -1,0 +1,27 @@
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+ 
+}
+
+div {
+    background-color: darkgrey;
+    color: darkgrey;
+    border: solid;
+    border-color: black;
+    padding: .5rem;
+    margin: .5rem;
+    width: 200px;
+    height: 200px;
+}
+div:hover {
+    cursor: pointer;
+    background-color: khaki;
+    color: khaki;
+}
+
+h1 {
+    display: grid;
+    justify-content: center;
+}
