@@ -1,7 +1,10 @@
+body {
+    background-color: black;
+}
 section {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: .5fr .5fr 3fr;
+    margin-left: 350px;
  
 }
 
@@ -14,14 +17,41 @@ div {
     margin: .5rem;
     width: 200px;
     height: 200px;
+        border: 5px solid #dadada;
+        border-radius: 7px;
+
 }
 div:hover {
     cursor: pointer;
-    background-color: khaki;
-    color: khaki;
+    background-color: rgb(240, 140, 232);
+    color:  rgb(240, 140, 232);
+    box-shadow:
+        0 0 60px 30px #fff,  /* inner white */
+        0 0 100px 60px #f0f, /* middle magenta */
+        0 0 140px 90px #0ff; /* outer cyan */
 }
 
 h1 {
     display: grid;
     justify-content: center;
+    margin-top: auto;
+    color:  rgb(240, 140, 232);
+        filter: brightness(200%);
+        font-size: 180px;
+        font-weight: bold;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        filter: blur(0.02em);
+        mix-blend-mode: difference;
+        color: #fff;
+        text-shadow:
+          0 0 5px #fff,
+          0 0 10px #fff,
+          0 0 20px rgb(255, 255, 255),
+          0 0 40px #0ff,
+          0 0 80px rgb(255, 0, 212),
+          0 0 90px rgb(174, 0, 255),
+          0 0 100px rgb(195, 0, 255),
+          0 0 150px #0ff;
 }
+    

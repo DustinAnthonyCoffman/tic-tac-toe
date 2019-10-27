@@ -90,11 +90,12 @@ function backgroundChange(evt) {
         return;
     }
         if (turn === 'player1') {
-           targetDiv.style.backgroundImage = 'url(https://i.imgur.com/k7SbxY5.png)';
+           targetDiv.style.backgroundImage = 'url(https://i.imgur.com/XY7aio7.png)';
             targetDiv.textContent = '';
         }
         if (turn === 'player2') {
-            targetDiv.style.backgroundImage = 'url(https://i.imgur.com/Z9XWiPy.png)';
+        
+            targetDiv.style.backgroundImage = 'url(https://i.imgur.com/uMSHG0f.png)';   
             targetDiv.textContent = '';
         }
 }
