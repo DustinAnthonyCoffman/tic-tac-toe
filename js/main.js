@@ -1,3 +1,13 @@
+/*
+center the x's and o's
+push the grid up
+fix winning substring 
+produce alert h1 for winner/tie
+fix background click taking players turn
+*/
+
+
+
 /*----- constants -----*/
 //values that cannot change
 
