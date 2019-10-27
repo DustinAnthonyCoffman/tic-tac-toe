@@ -34,6 +34,7 @@ div:hover {
 h1 {
     display: grid;
     justify-content: center;
+    margin: 0;
     margin-top: 70px;
     border-radius: 100rem;
     color:  rgb(240, 140, 232);
@@ -61,7 +62,7 @@ h1:hover {
     background-color: rgb(240, 140, 232);
     color:  rgb(240, 140, 232);
     box-shadow:
-        0 0 60px 30px rgb(177, 34, 34),  /* inner white */
+        0 0 60px 30px rgb(34, 144, 177),  /* inner white */
         0 0 100px 60px #f0f, /* middle magenta */
         0 0 140px 90px rgb(89, 0, 255); /* outer cyan */
 }
