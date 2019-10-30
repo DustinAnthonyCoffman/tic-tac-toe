@@ -69,6 +69,10 @@ function init() {
     render();
 }
 
+function refreshPage(){
+    window.location.reload();
+} 
+
 function render() {
    //clear all values
    player1 = [];
